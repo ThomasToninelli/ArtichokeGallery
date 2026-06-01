@@ -1,0 +1,127 @@
+.header {
+  padding: 50px 20px;
+  text-align: center;
+  background: #2d5a27;
+  color: white;
+  background-image: url(https://t3.ftcdn.net/jpg/03/08/93/46/360_F_308934657_5Q7cqp8BQSzrJ9DEJQ7G6bJfGAUJqETl.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 5px;
+}
+
+.post {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.post img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.descrizione { 
+  padding: 25px; 
+}
+.descrizione h3 { 
+  margin-bottom: 12px; 
+  color: #1b3a1a; 
+  font-size: 1.5rem; 
+}
+.descrizione p { 
+  color: #555; 
+  line-height: 1.6; 
+}
+
+.refresh { 
+  text-align: center; 
+}
+.refresh button {
+  padding: 15px 40px;
+  background-color: #2d5a27;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s, background 0.3s;
+}
+.refresh button:hover { 
+  background-color: #3e7b37; 
+  transform: scale(1.05); 
+}
+
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  gap: 25px;
+}
+
+.colonna_side {
+  flex: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Etichetta intestazione colonna laterale */
+.side-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #c9a84c;
+  border-bottom: 2px solid #c9a84c;
+  padding-bottom: 6px;
+}
+
+/* Box delle colonne laterali */
+.box {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+.box img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  display: block;
+}
+
+.box-info {
+  padding: 8px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.box-titolo {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1b3a1a;
+}
+
+.box-autore {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.colonna_c {
+  flex: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
