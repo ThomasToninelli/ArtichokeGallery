@@ -1,0 +1,77 @@
+
+.header-profilo {
+  background: white;
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #2d5a27;
+  margin-bottom: 15px;
+}
+
+.header-profilo h2 { 
+  color: #1b3a1a; 
+  font-size: 2rem; 
+}
+.header-profilo p 
+{ color: #666; 
+  max-width: 600px; 
+  margin: 10px auto; 
+}
+
+.post {
+  width: 80%;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.griglia-opere {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.post img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.descrizione { 
+  padding: 25px; 
+}
+.descrizione h3 { 
+  margin-bottom: 12px; 
+  color: #1b3a1a; 
+  font-size: 1.5rem; 
+}
+.descrizione p { 
+  color: #555; 
+  line-height: 1.6; 
+}
+
+.griglia-opere {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.intro h3 {
+  color: #1b3a1a; 
+  margin-bottom: 20px;
+  font-size: larger;
+  text-align: center;
+}

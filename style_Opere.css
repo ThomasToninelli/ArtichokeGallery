@@ -1,0 +1,175 @@
+/* opere.css */
+
+.opere-header {
+  background-color: #2d5a27;
+  background-image: linear-gradient(rgba(27, 58, 26, 0.72), rgba(27, 58, 26, 0.72)),
+    url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.opere-header h2 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.opere-header p {
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.griglia-opere {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.opera-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+}
+
+.opera-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  border-top: 3px solid #c9a84c;
+}
+
+.opera-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.opera-card:hover img {
+  transform: scale(1.04);
+}
+
+.opera-info {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.opera-card:hover .opera-titolo {
+  color: #c9a84c;
+}
+
+.opera-titolo {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1b3a1a;
+}
+
+.opera-autore {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.opera-card:hover::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.88);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.lightbox.attivo {
+  display: flex;
+}
+
+.lightbox-contenuto {
+  position: relative;
+  max-width: 860px;
+  width: 100%;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  animation: zoomIn 0.25s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.88); opacity: 0; }
+  to   { transform: scale(1);    opacity: 1; }
+}
+
+.lightbox-contenuto img {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  display: block;
+  background: #111;
+}
+
+.lightbox-info {
+  padding: 18px 22px;
+}
+
+.lightbox-info h3 {
+  color: #1b3a1a;
+  font-size: 1.3rem;
+  margin-bottom: 4px;
+}
+
+.lightbox-info p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.lightbox-chiudi {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: rgba(0,0,0,0.55);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  line-height: 1;
+  z-index: 10;
+  transition: background 0.2s;
+}
+
+.lightbox-chiudi:hover {
+  background: #2d5a27;
+}
+
+@media (max-width: 600px) {
+  .griglia-opere {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 14px;
+  }
+  .opera-card img {
+    height: 140px;
+  }
+}
