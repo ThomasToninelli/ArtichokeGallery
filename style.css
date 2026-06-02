@@ -93,6 +93,9 @@ body {
   .topnav {
     padding: 0 2%;
   }
+  .side-label {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
